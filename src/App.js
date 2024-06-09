@@ -1,12 +1,10 @@
-import './App.css'
-// import Game from './components/tictacttoe/Game'
-import GameWithReducer from './components/tictacttoe/GameWithReducer'
-// import Toggle from './components/toggle/Toggle'
+import './App.scss'
+import CardList from './components/card/CardList'
 
 function App() {
   return (
     <div>
-      <GameWithReducer />
+      <CardList></CardList>
     </div>
   )
 }
