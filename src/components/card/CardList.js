@@ -1,5 +1,4 @@
 import React from 'react'
-import Card from './Card'
 import styled from 'styled-components'
 
 const StyleCardList = styled.div`
@@ -9,17 +8,8 @@ const StyleCardList = styled.div`
   padding: 20px;
 `
 
-const CardList = () => {
-  return (
-    <StyleCardList>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-    </StyleCardList>
-  )
+const CardList = (props) => {
+  return <StyleCardList>{props.children}</StyleCardList>
 }
 
 export default CardList
