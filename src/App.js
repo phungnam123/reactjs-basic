@@ -1,12 +1,13 @@
 import './App.scss'
 import CardList from './components/card/CardList'
-import Card2 from './components/card/CardTwo'
+import CardTailWind from './components/card/CardTailWind'
+// import Card2 from './components/card/CardTwo'
 
 function App() {
   return (
     <div>
       <CardList>
-        <Card2 secondary={true}></Card2>
+        <CardTailWind></CardTailWind>
       </CardList>
     </div>
   )
