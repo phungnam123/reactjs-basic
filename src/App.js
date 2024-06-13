@@ -1,14 +1,10 @@
 import './App.scss'
-import CardList from './components/card/CardList'
-import CardTailWind from './components/card/CardTailWind'
-// import Card2 from './components/card/CardTwo'
+import Photos from './components/photo/Photos'
 
 function App() {
   return (
     <div>
-      <CardList>
-        <CardTailWind></CardTailWind>
-      </CardList>
+      <Photos></Photos>
     </div>
   )
 }
