@@ -1,10 +1,10 @@
 import './App.scss'
-import Photos from './components/photo/Photos'
+import HackerNews from './components/news/HackerNews'
 
 function App() {
   return (
     <div>
-      <Photos></Photos>
+      <HackerNews />
     </div>
   )
 }

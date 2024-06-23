@@ -20,26 +20,21 @@ video {
   display: block;
   max-width: 100%;
 }
-input,
-select,
-textarea {
-  background-color: transparent;
-  outline: none;
-}
-button {
-  cursor: pointer;
-  background-color: transparent;
-  outline: none;
-  border: 0;
-}
+
 body {
   min-height: 100vh;
   font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  background-color: #eee;
   font-size: 16px;
   line-height: 1;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #eee;
+.border-input {
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+.border-input:focus {
+  border-color: rgba(0, 94, 255, 0.814);
 }

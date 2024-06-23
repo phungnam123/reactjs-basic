@@ -1,13 +1,13 @@
 import axios from 'axios'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const Photos = () => {
   const [randomPhotos, setRandomPhotos] = useState([])
   const [nextPage, setNextPage] = useState(1)
 
-  const getRandomPhotos = (page) => {
+  const getRandomPhotos = async (page) => {
     try {
-      const response = axios.get(
+      const response = await axios.get(
         `https://picsum.photos/v2/list?page=${page}&limit=8`
       )
       return response.data
@@ -16,7 +16,9 @@ const Photos = () => {
     }
   }
 
-  const hanldeLoadMore = () => {
+  const hanldeLoadMorePhotos = useRef()
+
+  hanldeLoadMorePhotos.current = () => {
     getRandomPhotos(nextPage).then((images) => {
       const newImages = [...randomPhotos, ...images]
       setRandomPhotos(newImages)
@@ -25,8 +27,8 @@ const Photos = () => {
   }
 
   useEffect(() => {
-    hanldeLoadMore()
-  }, [])
+    hanldeLoadMorePhotos.current()
+  }, [hanldeLoadMorePhotos])
   return (
     <div>
       <div className="grid grid-cols-4 gap-5 p-5">
@@ -48,7 +50,7 @@ const Photos = () => {
       </div>
       <div className="text-center">
         <button
-          onClick={hanldeLoadMore}
+          onClick={hanldeLoadMorePhotos.current}
           className="bg-purple-400 inline-block px-8 py-3 text-white"
         >
           Load More
