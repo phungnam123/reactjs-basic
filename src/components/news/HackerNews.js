@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { useEffect, useRef, useState } from 'react'
-import lodash from 'lodash'
+// import lodash from 'lodash'
 
 const HackerNews = () => {
   // https://hn.algolia.com/api/v1/search?query=react
@@ -40,7 +40,7 @@ const HackerNews = () => {
       <div className="flex mb-2">
         <input
           type="text"
-          className="w-full block p-3 border-input"
+          className="w-full block p-3 border-input border-2 border-gray-200 focus:border-blue-500 outline-none"
           placeholder="Enter your keyword..."
           defaultValue={query}
           onChange={(e) => setQuery(e.target.value)}

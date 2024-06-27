@@ -1,10 +1,10 @@
 import './App.scss'
-import HackerNews from './components/news/HackerNews'
+import Dropdown from './components/Dropdown'
 
 function App() {
   return (
     <div>
-      <HackerNews />
+      <Dropdown></Dropdown>
     </div>
   )
 }
